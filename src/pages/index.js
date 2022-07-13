@@ -2,68 +2,82 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 
-import Layout from '../components/layout'
-import Hero from '../components/hero'
-import ArticlePreview from '../components/article-preview'
+import ProductList from '../components_product/ProductList'
+import SEO from '../components_product/SEO'
+import logo from '../images/ill-short-dark.svg'
+import Layout from '../components_product/layout'
+import { Image, Header } from 'semantic-ui-react'
 
-class RootIndex extends React.Component {
-  render() {
-    const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
-    const [author] = get(this, 'props.data.allContentfulPerson.nodes')
-
-    return (
-      <Layout location={this.props.location}>
-        <Hero
-          image={author.heroImage.gatsbyImageData}
-          title={author.name}
-          content={author.shortBio}
-        />
-        <ArticlePreview posts={posts} />
-      </Layout>
-    )
-  }
-}
-
-export default RootIndex
-
-export const pageQuery = graphql`
-  query HomeQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
-      nodes {
+export const query = graphql`
+  query AllProducts {
+    site {
+      siteMetadata {
         title
-        slug
-        publishDate(formatString: "MMMM Do, YYYY")
-        tags
-        heroImage {
-          gatsbyImageData(
-            layout: FULL_WIDTH
-            placeholder: BLURRED
-            width: 424
-            height: 212
-          )
-        }
-        description {
-          raw
-        }
       }
     }
-    allContentfulPerson(
-      filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
-    ) {
+    allContentfulProduct {
       nodes {
-        name
-        shortBio {
-          raw
+        id
+        productName {
+          productName
         }
-        title
-        heroImage: image {
-          gatsbyImageData(
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            width: 1180
-          )
+        productDescription {
+          productDescription
         }
+        image {
+          url
+        }
+        price
+        slug
+        sku
       }
     }
   }
 `
+
+// const products = get(this, 'props.data.allContentfulProduct.nodes')
+// const products = get(data, 'allContentfulProduct.nodes')
+
+// const products = get(this, 'ProductsQuery.nodes')
+
+// console.log('test')
+// console.log(products)
+
+// const siteTitle = get(this, 'site.siteMetadata.title')
+// const products = get(data, 'allMoltinProduct.edges')
+// const productsList = get(this, 'allContentfulProduct.nodes')
+// const filterProductsWithoutImages = products.filter(v => v.node.mainImageHref)
+console.log('hi')
+
+const StoreIndex = ({ data }) => {
+  return (
+    <Layout>
+      <h1>hi</h1>
+
+      <h1>{data.allContentfulProduct.nodes[0].productName.productName}</h1>
+    </Layout>
+    // <Layout>
+    //   {/* <SEO title={siteTitle} /> */}
+    //   <Header
+    //     as="h3"
+    //     icon
+    //     textAlign="center"
+    //     style={{
+    //       marginBottom: '2em',
+    //     }}
+    //   >
+    //     <Header.Content
+    //       style={{
+    //         width: '60%',
+    //         margin: '0 auto',
+    //       }}
+    //     >
+    //       <Image src={logo} alt="logo" />
+    //     </Header.Content>
+    //   </Header>
+    //   <ProductList products={data} />
+    // </Layout>
+  )
+}
+
+export default StoreIndex
