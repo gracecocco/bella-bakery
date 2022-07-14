@@ -7,6 +7,7 @@ import SEO from '../components_product/SEO'
 import logo from '../images/ill-short-dark.svg'
 import Layout from '../components_product/layout'
 import { Image, Header } from 'semantic-ui-react'
+import { Input, PageHeader } from 'antd'
 
 export const query = graphql`
   query AllProducts {
@@ -48,35 +49,32 @@ export const query = graphql`
 // const productsList = get(this, 'allContentfulProduct.nodes')
 // const filterProductsWithoutImages = products.filter(v => v.node.mainImageHref)
 console.log('hi')
+// const products = data.allContentfulProduct.nodes
 
-const StoreIndex = ({ data }) => {
+const StoreIndex = ({ location, data }) => {
   return (
-    <Layout>
-      <h1>hi</h1>
-
+    <Layout location={location}>
+      <SEO title={data.site.siteMetadata.siteTitle} />
+      <Header
+        as="h3"
+        icon
+        textAlign="center"
+        style={{
+          marginBottom: '2em',
+        }}
+      >
+        <Header.Content
+          style={{
+            width: '60%',
+            margin: '0 auto',
+          }}
+        >
+          <Image src={logo} alt="logo" />
+        </Header.Content>
+      </Header>
       <h1>{data.allContentfulProduct.nodes[0].productName.productName}</h1>
+      {/* <ProductList products={data.allContentfulProduct.nodes} /> */}
     </Layout>
-    // <Layout>
-    //   {/* <SEO title={siteTitle} /> */}
-    //   <Header
-    //     as="h3"
-    //     icon
-    //     textAlign="center"
-    //     style={{
-    //       marginBottom: '2em',
-    //     }}
-    //   >
-    //     <Header.Content
-    //       style={{
-    //         width: '60%',
-    //         margin: '0 auto',
-    //       }}
-    //     >
-    //       <Image src={logo} alt="logo" />
-    //     </Header.Content>
-    //   </Header>
-    //   <ProductList products={data} />
-    // </Layout>
   )
 }
 

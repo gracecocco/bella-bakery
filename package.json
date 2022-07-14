@@ -9,9 +9,10 @@
   },
   "dependencies": {
     "@contentful/rich-text-plain-text-renderer": "^15.12.1",
+    "antd": "^4.21.6",
     "gatsby": "^4.0.0",
-    "gatsby-plugin-image": "^2.0.0",
     "gatsby-image": "^2.8.0",
+    "gatsby-plugin-image": "^2.0.0",
     "gatsby-plugin-react-helmet": "^5.0.0",
     "gatsby-plugin-sharp": "^4.0.0",
     "gatsby-source-contentful": "^7.0.0",
@@ -20,13 +21,12 @@
     "lodash": "^4.17.21",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-helmet": "^6.1.0",
     "react-headroom": "^2.2.8",
+    "react-helmet": "^6.1.0",
     "reading-time": "^2.0.0-1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.1.3",
     "styled-components": "^4.4.1"
-
   },
   "devDependencies": {
     "contentful-import": "^8.0.0",
@@ -58,4 +58,3 @@
     "netlify:deploy": "netlify deploy -d public -p"
   }
 }
-

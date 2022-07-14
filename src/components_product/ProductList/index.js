@@ -1,26 +1,28 @@
 /* eslint-disable camelcase */
 import React from 'react'
-import {Card, Image} from 'semantic-ui-react'
+import { Card, Image } from 'semantic-ui-react'
 import Img from 'gatsby-image'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 
-const mapProductsToItems = products =>
-  products.map(({node: {name, id, meta, mainImage}}) => {
-    const price = meta.display_price.with_tax.formatted || null
+const mapProductsToItems = (products) =>
+  products.map(({ node: { productName, id, meta, image } }) => {
+    const price = price || null
     return {
       as: Link,
       to: `/product/${id}/`,
       childKey: id,
       image: (
         <Image>
-          <Img fluid={mainImage.childImageSharp.sizes} alt={name} />
+          <Img alt={productName.productName} />
         </Image>
       ),
-      header: name,
-      meta: <Card.Meta style={{color: 'dimgray'}}>{price}</Card.Meta>,
+      header: productName.productName,
+      meta: <Card.Meta style={{ color: 'dimgray' }}>{price}</Card.Meta>,
     }
   })
 
-export default ({products}) => (
+export default ({ products }) => (
   <Card.Group items={mapProductsToItems(products)} itemsPerRow={2} stackable />
 )
+
+// fluid={mainImage.childImageSharp.sizes}
