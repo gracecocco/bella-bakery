@@ -1,14 +1,51 @@
 {
   "ProductName": "Dish Towel Set",
+  "Description": "Made in Portugal of durable, 2-ply organic cotton yarns, our Dish Towl Set stands the test of time. With a 500 gram weight that's substantial yet lightweight, they have a beautiful design you'll love.",
   "Price": "4.99",
-  "Image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR_7fmRtf2iJ7tQhFUaSuKh7YeiZRyTooWFR2dSKzbu94I0qrtvwS0rLW7Uk2GIxM7VM3ciPbYAUD_hv75cj7_K3jXY32EfW-pmwiKathZE_jVF4IJZxNay4g&usqp=CAE",
   "SKU": "304.930.48",
-  "Color_2": "Orange",
-  "Color_1": "White",
-  "Pattern": "Orange",
-  "Size": "24\"x18\"",
-  "Quantity": "4",
-  "Designer": "Hannah Wilcox",
-  "Material": "100% cotton",
-  "Description": "Made in Portugal of durable, 2-ply organic cotton yarns, our Textured Towels stand the test of time. With a 500 gram weight that's substantial yet lightweight, they have a ribbed texture you'll love."
+  "Product": {
+    "Details": {
+      "Color": {
+        "label": "Color",
+        "values": {
+          "primary": "White",
+          "secondary": "Orange"
+        }
+      },
+      "Material": {
+        "label": "Material",
+        "value": "100% cotton"
+      },
+      "Pattern": {
+        "label": "Pattern",
+        "value": "Orange"
+      },
+      "Designer": {
+        "label": "Designer",
+        "value": "Hannah Wilcox"
+      },
+      "Quantity": {
+        "label": "Quantity",
+        "value": "4"
+      },
+      "Size": {
+        "label": "Size",
+        "value": "24\"x18\""
+      }
+    }
+  },
+  "Sign up": "Sign up",
+  "Sign in": "Sign in",
+  "Cart": "Cart",
+  "Products": "Products",
+  "About": "About",
+  "Privacy": "Privacy",
+  "Terms": "Terms",
+  "Services": "Services",
+  "Our Products": "Our Products",
+  "Twitter": "Twitter",
+  "Facebook": "Facebook",
+  "Email": "Email",
+  "History": "History",
+  "About Description": "Bella's Bakery was established in 1994 when Bella sold her first birthday cake. She has been committed to delivering excellence in pastries and customer service ever since."
 }

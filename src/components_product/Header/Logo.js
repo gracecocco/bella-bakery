@@ -1,12 +1,10 @@
 import React from 'react'
 import { Image } from 'semantic-ui-react'
 
-import moltin from '../../images/moltin-light-hex.svg.svg'
-
 const Logo = () => (
   <Image
     size="mini"
-    src={moltin}
+    src="https://cdn-icons-png.flaticon.com/512/2718/2718539.png"
     style={{ marginRight: '1.5em' }}
     alt="Bella's Bakery"
   />

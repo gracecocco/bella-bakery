@@ -1,17 +1,14 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import { Item, Label } from 'semantic-ui-react'
-import regular_strings from '../../content/regular_strings.json'
 
 import AddToCart from '../AddToCart'
 
-const strings = regular_strings
-
-export default () => (
+export default ({ strings }) => (
   <Item.Group>
     <Item style={{ alignItems: 'center' }}>
       <Item.Image
-        src={strings.Image}
+        src="https://www.ikea.com/us/en/images/products/torvfly-dish-towel-patterned-orange__1156274_pe887030_s5.jpg?f=s"
         size="medium"
         alt={strings.ProductName}
       ></Item.Image>

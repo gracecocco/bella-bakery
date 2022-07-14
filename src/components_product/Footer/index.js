@@ -1,6 +1,6 @@
 import React from 'react'
-import {Link} from 'gatsby'
-import {Segment, Container, Grid, List, Header} from 'semantic-ui-react'
+import { Link } from 'gatsby'
+import { Segment, Container, Grid, List, Header } from 'semantic-ui-react'
 
 const twitterLink = (
   <a href="https://twitter.com/parmsang" alt="twitter link">
@@ -50,25 +50,26 @@ const Footer = () => (
             </List>
           </Grid.Column>
           <Grid.Column width={7}>
-            <Header as="h4">Footer Header</Header>
+            <Header as="h4">History</Header>
             <p>
-              Extra space for a call to action inside the footer that could help
-              re-engage users.
+              Bella's Bakery was established in 1994 when Bella sold her first
+              birthday cake. She has been committed to delivering excellence in
+              pastries and customer service ever since.
             </p>
-            <List horizontal style={{display: 'flex'}}>
+            <List horizontal style={{ display: 'flex' }}>
               <List.Item
                 icon="twitter"
-                style={{display: 'flex'}}
+                style={{ display: 'flex' }}
                 content={twitterLink}
               />
               <List.Item
                 icon="facebook"
-                style={{display: 'flex'}}
+                style={{ display: 'flex' }}
                 content={facebookLink}
               />
               <List.Item
                 icon="mail"
-                style={{display: 'flex'}}
+                style={{ display: 'flex' }}
                 content={emailLink}
               />
             </List>

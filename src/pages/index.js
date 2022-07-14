@@ -10,6 +10,8 @@ import { Image, Header } from 'semantic-ui-react'
 import { Input, PageHeader } from 'antd'
 import ProductSummary from '../components_product/ProductSummary'
 import ProductAttributes from '../components_product/ProductAttributes'
+import regular_strings from '../content/regular_strings.json'
+import instrumented_strings from '../content/instrumented_strings.json'
 
 export const query = graphql`
   query AllProducts {
@@ -38,22 +40,8 @@ export const query = graphql`
   }
 `
 
-// const products = get(this, 'props.data.allContentfulProduct.nodes')
-// const products = get(data, 'allContentfulProduct.nodes')
-
-// const products = get(this, 'ProductsQuery.nodes')
-
-// console.log('test')
-// console.log(products)
-
-// const siteTitle = get(this, 'site.siteMetadata.title')
-// const products = get(data, 'allMoltinProduct.edges')
-// const productsList = get(this, 'allContentfulProduct.nodes')
-// const filterProductsWithoutImages = products.filter(v => v.node.mainImageHref)
-console.log('hi')
-// const products = data.allContentfulProduct.nodes
-// const products = get(this.props, 'data.allContentfulProduct.nodes')
-// const products = get(this.props?.data?.allContentfulProduct.nodes)
+const strings = regular_strings
+// const strings = instrumented_strings
 
 const StoreIndex = ({ location, data }) => {
   return (
@@ -76,8 +64,8 @@ const StoreIndex = ({ location, data }) => {
           <Image src={logo} alt="logo" />
         </Header.Content>
       </Header>
-      <ProductSummary />
-      <ProductAttributes />
+      <ProductSummary strings={strings} />
+      <ProductAttributes strings={strings} />
       {/* <ProductList products={data.allContentfulProduct.nodes} /> */}
     </Layout>
   )
