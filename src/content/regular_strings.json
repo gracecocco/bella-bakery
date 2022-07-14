@@ -1,9 +1,9 @@
 {
-  "ProductName": "Dish Towel Set",
-  "Description": "Made in Portugal of durable, 2-ply organic cotton yarns, our Dish Towl Set stands the test of time. With a 500 gram weight that's substantial yet lightweight, they have a beautiful design you'll love.",
-  "Price": "4.99",
-  "SKU": "304.930.48",
   "Product": {
+    "Description": "Made in Portugal of durable, 2-ply organic cotton yarns, our Dish Towl Set stands the test of time. With a 500 gram weight that's substantial yet lightweight, they have a beautiful design you'll love.",
+    "ProductName": "Dish Towel Set",
+    "Price": "4.99",
+    "SKU": "304.930.48",
     "Details": {
       "Color": {
         "label": "Color",
@@ -34,18 +34,22 @@
       }
     }
   },
-  "Sign up": "Sign up",
-  "Sign in": "Sign in",
-  "Cart": "Cart",
-  "Products": "Products",
+  "Header": {
+    "Sign up": "Sign up",
+    "Sign in": "Sign in",
+    "Cart": "Cart",
+    "Products": "Products"
+  },
   "About": "About",
-  "Privacy": "Privacy",
-  "Terms": "Terms",
-  "Services": "Services",
-  "Our Products": "Our Products",
-  "Twitter": "Twitter",
-  "Facebook": "Facebook",
-  "Email": "Email",
-  "History": "History",
-  "About Description": "Bella's Bakery was established in 1994 when Bella sold her first birthday cake. She has been committed to delivering excellence in pastries and customer service ever since."
+  "Footer": {
+    "Privacy": "Privacy",
+    "Terms": "Terms",
+    "Services": "Services",
+    "Our Products": "Our Products",
+    "Twitter": "Twitter",
+    "Facebook": "Facebook",
+    "Email": "Email",
+    "History": "History",
+    "About Description": "Bella's Bakery was established in 1994 when Bella sold her first birthday cake. She has been committed to delivering excellence in pastries and customer service ever since."
+  }
 }

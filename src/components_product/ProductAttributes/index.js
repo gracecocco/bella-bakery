@@ -5,7 +5,7 @@ import { Header, Divider, Table } from 'semantic-ui-react'
 export default ({ strings }) => (
   <div>
     <Header as="h3">{strings.About}</Header>
-    <p>{strings.Description}</p>
+    <p>{strings.Product.Description}</p>
 
     <Divider />
 

@@ -10,13 +10,13 @@ export default ({ strings }) => (
       <Item.Image
         src="https://www.ikea.com/us/en/images/products/torvfly-dish-towel-patterned-orange__1156274_pe887030_s5.jpg?f=s"
         size="medium"
-        alt={strings.ProductName}
+        alt={strings.Product.ProductName}
       ></Item.Image>
       <Item.Content>
-        <Item.Header>{strings.ProductName}</Item.Header>
+        <Item.Header>{strings.Product.ProductName}</Item.Header>
         <Item.Description>
-          <p>${strings.Price}</p>
-          <Label>SKU: {strings.SKU}</Label>
+          <p>${strings.Product.Price}</p>
+          <Label>SKU: {strings.Product.SKU}</Label>
         </Item.Description>
       </Item.Content>
     </Item>
