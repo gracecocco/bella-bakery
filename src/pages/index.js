@@ -73,7 +73,7 @@ const StoreIndex = ({ location, data }) => {
         </Header.Content>
       </Header>
       <h1>{data.allContentfulProduct.nodes[0].productName.productName}</h1>
-      {/* <ProductList products={data.allContentfulProduct.nodes} /> */}
+      <ProductList products={data.allContentfulProduct.nodes} />
     </Layout>
   )
 }

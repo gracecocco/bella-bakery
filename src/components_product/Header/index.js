@@ -11,7 +11,7 @@ const Header = ({ location }) => {
 
   return (
     <>
-      <Responsive maxWidth={Responsive.onlyMobile.maxWidth}>
+      {/* <Responsive maxWidth={Responsive.onlyMobile.maxWidth}>
         <MobileMenu
           location={location}
           token={token}
@@ -19,14 +19,14 @@ const Header = ({ location }) => {
           signout={signOut}
         />
       </Responsive>
-      <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-        <DesktopMenu
-          location={location}
-          token={token}
-          cartCount={cartCount}
-          signout={signOut}
-        />
-      </Responsive>
+      <Responsive minWidth={Responsive.onlyTablet.minWidth}> */}
+      <DesktopMenu
+        location={location}
+        token={token}
+        cartCount={cartCount}
+        signout={signOut}
+      />
+      {/* </Responsive> */}
     </>
   )
 }
