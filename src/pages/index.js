@@ -4,7 +4,7 @@ import get from 'lodash/get'
 
 import ProductList from '../components_product/ProductList'
 import SEO from '../components_product/SEO'
-import logo from '../images/ill-short-dark.svg'
+import logo from '../images/bella-logo.png'
 import Layout from '../components_product/layout'
 import { Image, Header } from 'semantic-ui-react'
 import { Input, PageHeader } from 'antd'
@@ -50,6 +50,8 @@ export const query = graphql`
 // const filterProductsWithoutImages = products.filter(v => v.node.mainImageHref)
 console.log('hi')
 // const products = data.allContentfulProduct.nodes
+// const products = get(this.props, 'data.allContentfulProduct.nodes')
+// const products = get(this.props?.data?.allContentfulProduct.nodes)
 
 const StoreIndex = ({ location, data }) => {
   return (
@@ -72,7 +74,6 @@ const StoreIndex = ({ location, data }) => {
           <Image src={logo} alt="logo" />
         </Header.Content>
       </Header>
-      <h1>{data.allContentfulProduct.nodes[0].productName.productName}</h1>
       <ProductList products={data.allContentfulProduct.nodes} />
     </Layout>
   )

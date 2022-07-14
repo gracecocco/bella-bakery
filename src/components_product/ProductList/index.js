@@ -10,14 +10,14 @@ const mapProductsToItems = (products) =>
       as: Link,
       to: `/product/${slug}/`,
       childKey: id,
-      image: <Image src={image[0].url} />,
+      image: <Image src={image[0].url} alt={productName.productName} fluid />,
       header: productName.productName,
       meta: <Card.Meta style={{ color: 'dimgray' }}>${price}</Card.Meta>,
     }
   })
 
 export default ({ products }) => (
-  <Card.Group items={mapProductsToItems(products)} itemsPerRow={2} stackable />
+  <Card.Group items={mapProductsToItems(products)} itemsPerRow={3} stackable />
 )
 
 /* <Img
