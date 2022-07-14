@@ -40,8 +40,8 @@ export const query = graphql`
   }
 `
 
-const strings = regular_strings
-// const strings = instrumented_strings
+// const strings = regular_strings
+const strings = instrumented_strings
 
 const StoreIndex = ({ location, data }) => {
   return (
