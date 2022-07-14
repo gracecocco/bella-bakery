@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react'
-import {Link, withPrefix} from 'gatsby'
-import {Menu, Container, Icon} from 'semantic-ui-react'
+import React, { useState, useEffect } from 'react'
+import { Link, withPrefix } from 'gatsby'
+import { Menu, Container, Icon } from 'semantic-ui-react'
 import ShoppingCartIcon from './ShoppingCartIcon'
 import Logo from './Logo'
 
-const DesktopMenu = ({location: {pathname}, token, cartCount, signout}) => {
+const DesktopMenu = ({ location: { pathname }, token, cartCount, signout }) => {
   const [activeItem, setActiveItem] = useState(pathname)
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const DesktopMenu = ({location: {pathname}, token, cartCount, signout}) => {
           header
         >
           <Logo />
-          Starter Store
+          Available Products
         </Menu.Item>
         {token ? (
           <Menu.Menu position="right">

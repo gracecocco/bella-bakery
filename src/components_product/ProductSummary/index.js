@@ -1,29 +1,26 @@
 import React from 'react'
 import Img from 'gatsby-image'
-
-import {Item, Label} from 'semantic-ui-react'
+import { Item, Label } from 'semantic-ui-react'
+import regular_strings from '../../content/regular_strings.json'
 
 import AddToCart from '../AddToCart'
 
-export default ({id, name, meta, sku, mainImage}) => (
+const strings = regular_strings
+
+export default () => (
   <Item.Group>
-    <Item style={{alignItems: 'center'}}>
-      <Item.Image size="medium">
-        <Img
-          style={{width: '250px'}}
-          fluid={mainImage.childImageSharp.sizes}
-          alt={name}
-        />
-      </Item.Image>
+    <Item style={{ alignItems: 'center' }}>
+      <Item.Image
+        src={strings.Image}
+        size="medium"
+        alt={strings.ProductName}
+      ></Item.Image>
       <Item.Content>
-        <Item.Header>{name}</Item.Header>
+        <Item.Header>{strings.ProductName}</Item.Header>
         <Item.Description>
-          <p>{meta.display_price.with_tax.formatted}</p>
-          <Label>{`SKU: ${sku}`}</Label>
+          <p>${strings.Price}</p>
+          <Label>SKU: {strings.SKU}</Label>
         </Item.Description>
-        <Item.Extra>
-          <AddToCart productId={id} />
-        </Item.Extra>
       </Item.Content>
     </Item>
   </Item.Group>

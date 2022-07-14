@@ -8,6 +8,8 @@ import logo from '../images/bella-logo.png'
 import Layout from '../components_product/layout'
 import { Image, Header } from 'semantic-ui-react'
 import { Input, PageHeader } from 'antd'
+import ProductSummary from '../components_product/ProductSummary'
+import ProductAttributes from '../components_product/ProductAttributes'
 
 export const query = graphql`
   query AllProducts {
@@ -56,7 +58,7 @@ console.log('hi')
 const StoreIndex = ({ location, data }) => {
   return (
     <Layout location={location}>
-      <SEO title={data.site.siteMetadata.siteTitle} />
+      {/* <SEO title={data.site.siteMetadata.siteTitle} /> */}
       <Header
         as="h3"
         icon
@@ -74,7 +76,9 @@ const StoreIndex = ({ location, data }) => {
           <Image src={logo} alt="logo" />
         </Header.Content>
       </Header>
-      <ProductList products={data.allContentfulProduct.nodes} />
+      <ProductSummary />
+      <ProductAttributes />
+      {/* <ProductList products={data.allContentfulProduct.nodes} /> */}
     </Layout>
   )
 }
