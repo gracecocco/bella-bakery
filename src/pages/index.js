@@ -45,7 +45,7 @@ const strings = regular_strings
 
 const StoreIndex = ({ location, data }) => {
   return (
-    <Layout location={location}>
+    <Layout location={location} strings={strings}>
       {/* <SEO title={data.site.siteMetadata.siteTitle} /> */}
       <Header
         as="h3"

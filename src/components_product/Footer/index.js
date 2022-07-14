@@ -2,23 +2,25 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Segment, Container, Grid, List, Header } from 'semantic-ui-react'
 
+const strings = strings
+
 const twitterLink = (
   <a href="https://twitter.com/parmsang" alt="twitter link">
-    Twitter
+    {strings.Footer.Twitter}
   </a>
 )
 const facebookLink = (
   <a href="https://facebook.com/" alt="facebook link">
-    Facebook
+    {strings.Footer.Facebook}
   </a>
 )
 const emailLink = (
   <a href="mailto:john@doe.com" alt="email link">
-    Email
+    {strings.Footer.Email}
   </a>
 )
 
-const Footer = () => (
+const Footer = ({ strings }) => (
   <Segment
     vertical
     style={{
@@ -34,10 +36,10 @@ const Footer = () => (
             <Header as="h4" content="About" />
             <List>
               <List.Item as={Link} to="/privacy/">
-                Privacy
+                {strings.Footer.Privacy}
               </List.Item>
               <List.Item as={Link} to="/terms/">
-                Terms
+                {strings.Footer.Terms}
               </List.Item>
             </List>
           </Grid.Column>
@@ -45,17 +47,13 @@ const Footer = () => (
             <Header as="h4" content="Services" />
             <List>
               <List.Item as={Link} to="/">
-                Our Products
+                {strings.Footer.OurProducts}
               </List.Item>
             </List>
           </Grid.Column>
           <Grid.Column width={7}>
-            <Header as="h4">History</Header>
-            <p>
-              Bella's Bakery was established in 1994 when Bella sold her first
-              birthday cake. She has been committed to delivering excellence in
-              pastries and customer service ever since.
-            </p>
+            <Header as="h4">{strings.Footer.History}</Header>
+            <p>{strings.Footer.AboutDescription}</p>
             <List horizontal style={{ display: 'flex' }}>
               <List.Item
                 icon="twitter"

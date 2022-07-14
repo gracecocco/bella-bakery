@@ -7,7 +7,7 @@ import 'semantic-ui-css/semantic.min.css'
 import 'antd/dist/antd.css'
 import { PageHeader } from 'antd'
 
-const Layout = ({ location, children }) => (
+const Layout = ({ location, children, strings }) => (
   <>
     <Headroom
       upTolerance={10}
@@ -17,7 +17,7 @@ const Layout = ({ location, children }) => (
       <Header location={location} />
     </Headroom>
     <Container text>{children}</Container>
-    <Footer />
+    <Footer strings={strings} />
   </>
 )
 

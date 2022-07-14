@@ -35,8 +35,8 @@
     }
   },
   "Header": {
-    "Sign up": "Sign up",
-    "Sign in": "Sign in",
+    "SignUp": "Sign up",
+    "SignIn": "Sign in",
     "Cart": "Cart",
     "Products": "Products"
   },
@@ -45,11 +45,11 @@
     "Privacy": "Privacy",
     "Terms": "Terms",
     "Services": "Services",
-    "Our Products": "Our Products",
+    "OurProducts": "Our Products",
     "Twitter": "Twitter",
     "Facebook": "Facebook",
     "Email": "Email",
     "History": "History",
-    "About Description": "Bella's Bakery was established in 1994 when Bella sold her first birthday cake. She has been committed to delivering excellence in pastries and customer service ever since."
+    "AboutDescription": "Bella's Bakery was established in 1994 when Bella sold her first birthday cake. She has been committed to delivering excellence in pastries and customer service ever since."
   }
 }
