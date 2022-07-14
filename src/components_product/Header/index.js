@@ -5,7 +5,7 @@ import MobileMenu from './MobileMenu'
 import AuthContext from '../Context/AuthContext'
 import CartContext from '../Context/CartContext'
 
-const Header = ({ location }) => {
+const Header = ({ location, strings }) => {
   const { cartCount } = useContext(CartContext)
   const { token, signOut } = useContext(AuthContext)
 
@@ -25,6 +25,7 @@ const Header = ({ location }) => {
         token={token}
         cartCount={cartCount}
         signout={signOut}
+        strings={strings}
       />
       {/* </Responsive> */}
     </>

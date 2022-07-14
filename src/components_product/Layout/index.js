@@ -14,7 +14,7 @@ const Layout = ({ location, children, strings }) => (
       downTolerance={10}
       style={{ zIndex: '20', height: '6.5em' }}
     >
-      <Header location={location} />
+      <Header location={location} strings={strings} />
     </Headroom>
     <Container text>{children}</Container>
     <Footer strings={strings} />

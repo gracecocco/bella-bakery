@@ -4,7 +4,13 @@ import { Menu, Container, Icon } from 'semantic-ui-react'
 import ShoppingCartIcon from './ShoppingCartIcon'
 import Logo from './Logo'
 
-const DesktopMenu = ({ location: { pathname }, token, cartCount, signout }) => {
+const DesktopMenu = ({
+  location: { pathname },
+  token,
+  cartCount,
+  signout,
+  strings,
+}) => {
   const [activeItem, setActiveItem] = useState(pathname)
 
   useEffect(() => {
@@ -21,7 +27,7 @@ const DesktopMenu = ({ location: { pathname }, token, cartCount, signout }) => {
           header
         >
           <Logo />
-          Products
+          {strings.Header.Products}
         </Menu.Item>
         {token ? (
           <Menu.Menu position="right">
@@ -49,21 +55,24 @@ const DesktopMenu = ({ location: { pathname }, token, cartCount, signout }) => {
               to="/register/"
               active={activeItem === withPrefix('/register/')}
             >
-              Sign up
+              {strings.Header.SignUp}
             </Menu.Item>
             <Menu.Item
               as={Link}
               to="/login/"
               active={activeItem === withPrefix('/login/')}
             >
-              Sign in
+              {strings.Header.SignIn}
             </Menu.Item>
             <Menu.Item
               as={Link}
               to="/cart/"
               active={activeItem === withPrefix('/cart/')}
             >
-              <ShoppingCartIcon cartCount={cartCount} name="Cart" />
+              <ShoppingCartIcon
+                cartCount={cartCount}
+                name={strings.Header.Cart}
+              />
             </Menu.Item>
           </Menu.Menu>
         )}
